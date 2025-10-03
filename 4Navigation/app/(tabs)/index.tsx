@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import {useState } from 'react';
 import { Platform, StyleSheet, View, Text, TextInput, TouchableOpacity, FlatList } from 'react-native';
 
@@ -33,9 +34,15 @@ const deleteTodo = (id:string)=>{
 }
 
 
-
   return (
     <View style={{marginTop:85,}}>
+
+
+      <Link href='/details'>
+  <Text style={{ color: 'blue', fontSize: 18 }}>Go To Details</Text>
+  </Link>
+
+
       <Text style={{fontSize:35, fontWeight:'bold', textAlign:'center', marginBottom:10}}>Todo App Flatlist</Text>
       <View>
         <TextInput
@@ -60,10 +67,16 @@ const deleteTodo = (id:string)=>{
       keyExtractor={item => item.id}
       renderItem={({item,index})=>(
         <View style={{flexDirection:'row', alignItems:'center'}}>
+
+
+          {/* DYNAMIC ROUTES */}
             <Text style={{color:'black', marginHorizontal:20}}>{index+1}</Text>
-            <Text style={{color:'black', marginHorizontal:20}}>
-            {item.title}
-          </Text>
+            <Link href={{
+            pathname:`/[id]`,
+            params: {id : item.id,title: item.title}
+            }}> 
+              <Text style={{ fontSize: 18 }}>{item.title}</Text>
+            </Link>
           <TouchableOpacity onPress={()=>deleteTodo(item.id)}><Text style={{backgroundColor:'red',color:'white', paddingHorizontal:5, paddingVertical:3, borderRadius:5}}>Delete</Text></TouchableOpacity>
           </View>  
       )}
