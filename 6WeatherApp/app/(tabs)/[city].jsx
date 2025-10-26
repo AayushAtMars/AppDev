@@ -107,7 +107,7 @@ const formattedTime = (unixTime) =>{
           <Text style={styles.value}>{data.main.humidity}%</Text>
         </View>
 
-
+  
         <View style={styles.tab}>
           <Text style={styles.heading}><FontAwesome5 name="low-vision" size={16} color="#00dff7" />  Visibility</Text>
           <Text style={styles.value}>{(data.visibility)/1000} km</Text>

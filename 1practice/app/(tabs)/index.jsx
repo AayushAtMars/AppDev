@@ -25,14 +25,14 @@ export default function HomeScreen() {
     <View style={{ backgroundColor: '#f0f0f0', flex: 1, justifyContent: 'center', alignItems:'center'}}>
 
 
-      {/* <Text style={styles.nameFont}>Aayush Kumar Singh</Text>
-      <Text style={styles.second}>Learning React Native</Text> */}
+      <Text style={styles.nameFont}>Aayush Kumar Singh</Text>
+      <Text style={styles.second}>Learning React Native</Text>
 
 
 
       {/* Custom Components and Props */}
-      {/* <ProfileCard name = 'Aayush' subtitle = 'Mahan' ></ProfileCard>
-      <ProfileCard name = 'Piyush' subtitle = 'Noob'></ProfileCard> */}
+      <ProfileCard name = 'Aayush' subtitle = 'Mahan' ></ProfileCard>
+      <ProfileCard name = 'Piyush' subtitle = 'Noob'></ProfileCard>
 
 
 
@@ -53,7 +53,7 @@ export default function HomeScreen() {
 
 
         {/* Handling Taps with <Button> & <TouchableOpacity> */}
-        <Text style={styles.nameFont} > Current Count : {counter}</Text>
+        {/* <Text style={styles.nameFont} > Current Count : {counter}</Text>
         <TouchableOpacity
         onPress={ ()=>setCounter(counter+1)}
         >
@@ -67,7 +67,7 @@ export default function HomeScreen() {
           <View style={{backgroundColor:'red', marginTop:10, borderRadius:10}}>
             <Text style={{color:'white', fontSize:20, paddingHorizontal:15, paddingVertical:7}}>Reset</Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
     </View>
   )
 }
